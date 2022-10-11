@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@keyframes background-desktop {
+  from {
+    background-position: right 100vw bottom 100vh, left 100vw top 100vh; }
+  to {
+    background-position: right 50vw bottom 40vh, left 50vw top 50vh; } }
+
+@keyframes background-mobile {
+  from {
+    background-position: right 100vw bottom 100vh, left 100vw top 100vh; }
+  to {
+    background-position: right 50vw bottom 60vh, left 50vw top 60vh; } }
+
 *,
 *::before,
 *::after {
@@ -7,4 +19,34 @@
   box-sizing: border-box; }
 
 body {
-  font-family: "Kumbh Sans", sans-serif; }
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+  display: grid;
+  place-content: center;
+  background-color: #19a2ae;
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-size: 70vmax;
+  animation: background-desktop 1s forwards ease-out; }
+
+main {
+  max-width: 21rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.cover {
+  width: 100%; }
+
+.profile-pic {
+  border-radius: 50%;
+  border: 0.3rem solid white;
+  display: block;
+  margin: 0 auto;
+  transform: translateY(-50%); }
+
+@media (max-width: 840px) {
+  body {
+    animation: background-mobile 1s forwards ease-out; } }

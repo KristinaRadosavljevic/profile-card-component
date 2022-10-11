@@ -5,6 +5,26 @@ $dark-cyan: hsl(185, 75%, 39%);
 $very-dark-desaturated-blue: hsl(229, 23%, 23%);
 $dark-grayish-blue: hsl(227, 10%, 46%);
 $dark-gray: hsl(0, 0%, 59%);
+$white: hsl(0, 0%, 100%);
+
+// Animations
+@keyframes background-desktop {
+  from {
+    background-position: right 100vw bottom 100vh, left 100vw top 100vh;
+  }
+  to {
+    background-position: right 50vw bottom 40vh, left 50vw top 50vh;
+  }
+}
+
+@keyframes background-mobile {
+  from {
+    background-position: right 100vw bottom 100vh, left 100vw top 100vh;
+  }
+  to {
+    background-position: right 50vw bottom 60vh, left 50vw top 60vh;
+  }
+}
 
 // Global resets
 *,
@@ -17,6 +37,43 @@ $dark-gray: hsl(0, 0%, 59%);
 
 body {
   font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+  display: grid;
+  place-content: center;
+  background-color: $dark-cyan;
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-size: 70vmax;
+  animation: background-desktop 1s forwards ease-out;
+}
+
+main {
+  max-width: 21rem;
+  background-color: $white;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.2);
+}
+
+.cover {
+  width: 100%;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  border: 0.3rem solid $white;
+  display: block;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+// Media queries
+@media (max-width: 840px) {
+  body {
+    animation: background-mobile 1s forwards ease-out;
+  }
 }
 
 // - Font size (name and stats): 18px
