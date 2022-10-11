@@ -1,0 +1,22 @@
+{
+  "name": "profile-card-component",
+  "version": "1.0.0",
+  "description": "Profile card component",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KristinaRadosavljevic/profile-card-component.git"
+  },
+  "author": "Kristina Radosavljevic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KristinaRadosavljevic/profile-card-component/issues"
+  },
+  "homepage": "https://github.com/KristinaRadosavljevic/profile-card-component#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
