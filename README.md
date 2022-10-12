@@ -11,8 +11,6 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -27,8 +25,8 @@ Build out the project to the designs provided.
 
 ### Links
 
-- Solution URL: [See the code on GitHub]()
-- Live Site URL: [View live site]()
+- Solution URL: [See the code on GitHub](https://github.com/KristinaRadosavljevic/profile-card-component)
+- Live Site URL: [View live site](https://profile-card-component-six-ashen.vercel.app/)
 
 ## My process
 
@@ -36,12 +34,14 @@ Build out the project to the designs provided.
 
 - Semantic HTML5 markup
 - CSS/Sass
+- Flexbox
+- Animations
 
 ### What I learned
 
-### Continued development
+This was a pretty straightforward challenge as far as the layout was concerned, but I did struggle and experiment a lot with the background image. This gave me an opportunity to practice all the different `background` properties, and I also challenged myself a bit by adding some animations to the background.
 
-### Useful resources
+In this process, I also discovered the power of using `vmax` and `vmin` units.
 
 ## Author
 
