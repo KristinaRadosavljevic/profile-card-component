@@ -9,19 +9,25 @@ $white: hsl(0, 0%, 100%);
 
 // Animations
 @keyframes background-desktop {
-  from {
+  0% {
     background-position: right 100vw bottom 100vh, left 100vw top 100vh;
   }
-  to {
+  60% {
+    background-position: right 47vw bottom 37vh, left 47vw top 47vh;
+  }
+  100% {
     background-position: right 50vw bottom 40vh, left 50vw top 50vh;
   }
 }
 
 @keyframes background-mobile {
-  from {
+  0% {
     background-position: right 100vw bottom 100vh, left 100vw top 100vh;
   }
-  to {
+  60% {
+    background-position: right 47vw bottom 57vh, left 47vw top 57vh;
+  }
+  100% {
     background-position: right 50vw bottom 60vh, left 50vw top 60vh;
   }
 }
@@ -46,11 +52,11 @@ body {
     url("../images/bg-pattern-bottom.svg");
   background-repeat: no-repeat;
   background-size: 70vmax;
-  animation: background-desktop 1s forwards ease-out;
+  animation: background-desktop 1.5s forwards ease-out;
 }
 
 main {
-  max-width: 21rem;
+  max-width: 24rem;
   background-color: $white;
   border-radius: 0.8rem;
   overflow: hidden;
@@ -69,11 +75,55 @@ main {
   transform: translateY(-50%);
 }
 
-// Media queries
-@media (max-width: 840px) {
-  body {
-    animation: background-mobile 1s forwards ease-out;
+header {
+  margin: -2rem auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  h1 {
+    font-size: 1.125rem;
+    color: $very-dark-desaturated-blue;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: $dark-grayish-blue;
   }
 }
 
-// - Font size (name and stats): 18px
+.location {
+  font-size: 1rem;
+  color: $dark-grayish-blue;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem 0;
+  border-top: 1px solid hsl(0, 0%, 78%);
+  text-align: center;
+
+  .number {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $very-dark-desaturated-blue;
+  }
+
+  .label {
+    font-size: 0.7rem;
+    color: $dark-gray;
+    letter-spacing: 1px;
+  }
+}
+
+// Media queries
+@media (max-width: 840px) {
+  body {
+    animation: background-mobile 1.5s forwards ease-out;
+  }
+}

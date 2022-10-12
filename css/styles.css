@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 @keyframes background-desktop {
-  from {
+  0% {
     background-position: right 100vw bottom 100vh, left 100vw top 100vh; }
-  to {
+  60% {
+    background-position: right 47vw bottom 37vh, left 47vw top 47vh; }
+  100% {
     background-position: right 50vw bottom 40vh, left 50vw top 50vh; } }
 
 @keyframes background-mobile {
-  from {
+  0% {
     background-position: right 100vw bottom 100vh, left 100vw top 100vh; }
-  to {
+  60% {
+    background-position: right 47vw bottom 57vh, left 47vw top 57vh; }
+  100% {
     background-position: right 50vw bottom 60vh, left 50vw top 60vh; } }
 
 *,
@@ -28,10 +32,10 @@ body {
   background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
   background-repeat: no-repeat;
   background-size: 70vmax;
-  animation: background-desktop 1s forwards ease-out; }
+  animation: background-desktop 1.5s forwards ease-out; }
 
 main {
-  max-width: 21rem;
+  max-width: 24rem;
   background-color: white;
   border-radius: 0.8rem;
   overflow: hidden;
@@ -47,6 +51,41 @@ main {
   margin: 0 auto;
   transform: translateY(-50%); }
 
+header {
+  margin: -2rem auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; }
+  header h1 {
+    font-size: 1.125rem;
+    color: #2d3248; }
+  header p {
+    font-size: 1.125rem;
+    color: #6a6f81; }
+
+.location {
+  font-size: 1rem;
+  color: #6a6f81;
+  text-align: center;
+  margin-bottom: 1.5rem; }
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem 0;
+  border-top: 1px solid #c7c7c7;
+  text-align: center; }
+  section .number {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #2d3248; }
+  section .label {
+    font-size: 0.7rem;
+    color: #969696;
+    letter-spacing: 1px; }
+
 @media (max-width: 840px) {
   body {
-    animation: background-mobile 1s forwards ease-out; } }
+    animation: background-mobile 1.5s forwards ease-out; } }
